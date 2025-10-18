@@ -49,8 +49,12 @@ while True:
         continue
     if gr==tr or gc==tc:
         print("CONGRATULATIONS!!! YOU HAVE SUCCESSFULLY USED YOUR BRAIN AND FOUND THE TREASURE!!")
+        grid[tr][tc]="💅🏽"
+        print()
+        for i in grid:
+            print(" ".join(i))
         break
     else:
-        grid[gr][gc]=="x"
+        grid[gr][gc]="x"
         hint=hints(tr,tc,gr,gc)
         print("HINT!",hint)
